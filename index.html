@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para mi reina ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Cielo con estrellas -->
+  <div class="cielo" id="cielo"></div>
+  
+  <!-- Luna -->
+  <div class="luna"></div>
+
+  <!-- Contenedor para pétalos -->
+  <div id="petal-container"></div>
+
+  <!-- Pantalla 1 -->
+  <div id="pantalla1" class="pantalla active">
+    <button onclick="mostrarIntro()">Presiona para visualizar</button>
+  </div>
+
+  <!-- Pantalla 2 -->
+  <div id="pantalla2" class="pantalla hidden">
+    <div class="intro">
+      <h1 id="typewriter"></h1>
+      <button onclick="iniciarPetalos()">Ver Sorpresa</button>
+    </div>
+  </div>
+
+  <!-- Pantalla 3 -->
+  <div id="pantalla3" class="pantalla hidden">
+    <!-- Mensaje -->
+    <h1 class="dedicatoria">✨ TE AMO YESSICA CON TODO MI CORAZON ✨</h1>
+
+    <!-- Contenedor de música con imagen -->
+    <div class="music-container">
+      <!-- Aquí debes reemplazar "ruta/a/tu/imagen.jpg" con la ruta de tu imagen -->
+      <img src="nosotros.jpg" alt="Nuestra foto" class="custom-image">
+      
+      <!-- Reproductor de audio personalizado -->
+      <div class="custom-audio-player">
+        <div class="audio-controls">
+          <button class="play-pause-btn">▶</button>
+          <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+          </div>
+          <div class="time" id="current-time">0:00</div>
+          <div class="volume-container">
+            <span class="volume-icon">🔊</span>
+            <input type="range" class="volume-slider" id="volume" min="0" max="1" step="0.01" value="1">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio oculto (para funcionalidad) -->
+    <audio id="audio-player">
+      <source src="Ed Maverick - Fuentes De Ortiz.mp3" type="audio/mpeg">
+      Tu navegador no soporta el audio.
+    </audio>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
